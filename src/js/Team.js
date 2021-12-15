@@ -1,6 +1,8 @@
 export default class Team {
-    constructor(name){
-        this.name = name
+    constructor(){
+        this.characterList = []
     }
-    
+    add(character){
+        this.characterList.push(character);
+    }
 }
