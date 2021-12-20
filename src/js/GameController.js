@@ -20,6 +20,8 @@ export default class GameController {
     //создаем команды
     const playerTeam = generateTeam([Bowman, Swordsman], 1, 2);
     const enemyTeam = generateTeam([Daemon, Undead], 1, 2);
+    console.log(playerTeam)
+    console.log(enemyTeam)
 
     //создаем массивы доступных начлаьных позиций для игрока и врага
     const boardSize = this.gamePlay.boardSize
@@ -49,6 +51,10 @@ export default class GameController {
     }
     //рисуем всех персонажей
     this.gamePlay.redrawPositions(positionedPlayerArray)
+
+    console.log(playerTeam)
+    console.log(enemyTeam)
+    this.gamePlay.addCellEnterListener(this.onCellEnter)
     
     
     // TODO: load saved stated from stateService
@@ -60,7 +66,7 @@ export default class GameController {
   }
 
   onCellEnter(index) {
-    // TODO: react to mouse enter
+    
   }
 
   onCellLeave(index) {
